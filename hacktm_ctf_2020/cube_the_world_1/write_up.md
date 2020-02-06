@@ -44,7 +44,8 @@ We started by mapping the color configuration of the cube on an online cube solv
 ![key_3](challenge_files_1/key/key_3.png)
 ![key_4](challenge_files_1/key/key_4.png)
 ![key_5](challenge_files_1/key/key_5.png)
-![key_6](challenge_files_1/key/key_6.png)
+![key_6](challenge_files_1/key/key_6.png)  
+
 Once this was done, the solver gave us the steps to get to a solved cube. Sweet! We reverse the operation and end up with the exact same cube as the pictures in the key folder. We then proceeded to write each letter on the cube and still using the online solver, we put the cube back into a solved state.
 
 ### Step 2
