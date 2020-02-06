@@ -55,16 +55,16 @@ For each video, you have to start from a solved cube and read the letters in the
 For instance, the first rotation of the first video gives the letter {W}  
 ![move_1](move_1.png)
 
-and the second letter {E}.
+and the second rotation generates the letter {E}.
 
 ![move_2](move_2.png)
 
 "we" is a valid word in words.txt, we thus have our first word.
 
 For some videos we had multiple letters for one rotation. A very simple solution for this is performing a regex search in words.txt
-For instance in videos 4.mp4, we get a 7 letter word composed of the following letters:  {A,E,D}{N}{G,K}{I}{N}{B,Y,E,D,L}{S}.  
-This translates as \(\[aed\]\)\(\[n\]\)\(\[gk\]\)\(\[i\]\)\(\[n\]\)\(\[byedl\]\)\(\[s\]\) in regex form.
-Two words can be found in the wordlist with this regex: engine and eugene.
+For instance in videos 5.mp4, we get a 7 letter word composed of the following letters:  {A,E,D}{N}{G,K}{I}{N}{B,Y,E,D,L}{S}.  
+This translates as \[aed\]\[n\]\[gk\]\[i\]\[n\]\[byedl\]\[s\] in regex form.
+Only one word can be found in the wordlist with this regex: engines.
 
 Going through the 5 videos, you get the following sentence:  
 we  
