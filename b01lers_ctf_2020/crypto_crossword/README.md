@@ -1,7 +1,7 @@
 # b01lers CTF – Crypto Crossword
 
 * **Category:** Crypto
-* **Points:** 
+* **Points:** 200
 
 ## Challenge
 
@@ -61,6 +61,7 @@ A quick google search reveals us that this command is chown, spelled backward **
 ---
 ### 2. GUR FZNYYRFG EFN RKCBARAG RIRE VA JVQRFCERNQ HFR.
 The sentence has the same format as a regular sentence so I tried applying ROT13:
+
 *THE SMALLEST RSA EXPONENT EVER IN WIDESPREAD USE.*
 
 The smallest RSA exponent is 3 or **three**.
@@ -68,6 +69,7 @@ The smallest RSA exponent is 3 or **three**.
 ---
 ### 3. 4261636b77617264733a2074776f20666f722062696e6172792c2074656e20666f7220646563696d616c2c20616e64207369787465656e20666f72206865782e20
 This one should be quite straightforward. Decoding it from hex gives us:
+
 *Backwards: two for binary, ten for decimal, and sixteen for hex.*
 
 The answer here is "base", but base only has 4 letters. Luckely there is another word for base: radix, spelled backwards **xidar**.
@@ -76,6 +78,7 @@ The answer here is "base", but base only has 4 letters. Luckely there is another
 ### 4 KLHHRYOB GSV URIHG QZEZHXIRKG UFMXGRLM BLF VEVI XZOOVW.
 As for the second one, this looks like a regular sentence. Trying ROT yields no results.
 My second guess was a substitution cipher encoding. An [online substitution cipher solver](https://www.guballa.de/substitution-solver) configured with English as output language gives this: POSSIBLY THE FIRST DAMASCRIPT FUNCTION YOU EMER CALLEG. We see that due to the potential presence of the word Javascript, it didn't manage to correctly substitute every letter. Giving the algorithm a little help and here is the complete sentence: 
+
 *POSSIBLY THE FIRST JAVASCRIPT FUNCTION YOU EVER CALLED.*
 
 A 5 letter Javascript function that is one of the first you ever called... Doesn't ring a bell? **alert**, of course!
@@ -85,6 +88,7 @@ A 5 letter Javascript function that is one of the first you ever called... Doesn
 Again, what looks like a good sentence format. Looking at the last two words, my mind flipped the letters almost automatically in place and read "five letters".
 All the words are thus scrambled. As for a lot of these small encodings, there are [online solvers](https://www.dcode.fr/shuffled-letters) for this.
 Decoding gives:
+
 *Electronic documents that prove ownership of keys, reduced to five letters.*
 
 Certificates!
@@ -93,6 +97,7 @@ Now reducing it to five letters confused me and first I used **certi**. Later, t
 ---
 ### 6. FRPPRQ UHVHUYHG ZRUG LQ F++ DQG SBWKRQ
 This one looked a lot like number 4 so I tried the basic substitution cipher of [Cyberchef](https://gchq.github.io/CyberChef/) and it was correct:
+
 *COMMON RESERVED WORD IN C++ AND PYTHON*
 
 Looking up a list of common reserved words in c++ and python gave some results but since our first letter (given by column 1) is "w": the reserved word turns out to be **while**.
@@ -101,7 +106,7 @@ Looking up a list of common reserved words in c++ and python gave some results b
 ### 7. TW9kZXJuIGNyeXB0byBlc3BlY2lhbGx5IGxpa2VzIGdyb3VwcyBvZiBwcmltZSBfX19fXy4=
 If it has an = symbol at the end, always try Base64 decoding first!
 
-Modern crypto especially likes groups of prime _____.
+*Modern crypto especially likes groups of prime _____.*
 
 Doing a reverse google search of this sentence gave the word **order**.
 
@@ -119,7 +124,9 @@ One of the most famous openssl vulnerability: Heartbleed. The first half of this
 
 ---
 ### 9. 7x4 2x1 6x1 3x2 # 2x1 7x4 # 2x1 6x2 7x4 9x1 3x2 7x3 # 6x2 8x2 6x1 2x2 3x2 7x3 # 3x3 4x3 8x3 3x2 1x1
-At first, I didn't see what this could be. I thought of phone keypad cipher but the 7x4 confused me. Afterwards, I just inversed the two operands and it was a damn phone keypad cipher! Decoded: *SAME # AS # ANSWER # NUMBER # FIVE*
+At first, I didn't see what this could be. I thought of phone keypad cipher but the 7x4 confused me. Afterwards, I just inversed the two operands and it was a damn phone keypad cipher! Decoded: 
+
+*SAME # AS # ANSWER # NUMBER # FIVE*
 
 Okay, so we fill in the same answer as number five.
 
